@@ -1,0 +1,35 @@
+{
+  "name": "Theme 4",
+  "description": "Neutral starter slot matching the current NoteSMP website until its visual direction is designed.",
+  "colors": {
+    "background": "#111713",
+    "surface": "#19211b",
+    "surfaceRaised": "#202a23",
+    "text": "#f0f3eb",
+    "muted": "#a7b0a7",
+    "border": "#344039",
+    "accent": "#d3ef75",
+    "accentSecondary": "#4eaa69",
+    "warning": "#e89a5c",
+    "danger": "#ef8175"
+  },
+  "shape": {
+    "cardRadius": 8,
+    "controlRadius": 5,
+    "heroRadius": 0,
+    "borderWidth": 1
+  },
+  "effects": {
+    "shadow": "none",
+    "hoverLift": 0,
+    "motionMs": 180
+  },
+  "backgrounds": {
+    "page": null,
+    "hero": "https://minecraft.wiki/images/Forest.png?536a7"
+  },
+  "typography": {
+    "body": "Manrope",
+    "display": "Manrope"
+  }
+}
