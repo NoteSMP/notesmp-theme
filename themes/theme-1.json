@@ -1,27 +1,27 @@
 {
   "name": "Theme 1",
-  "description": "Neutral starter slot matching the current NoteSMP website until its visual direction is designed.",
+  "description": "Blackstone test theme using the NoteSMP logo's gold and deep red palette.",
   "colors": {
-    "background": "#111713",
-    "surface": "#19211b",
-    "surfaceRaised": "#202a23",
-    "text": "#f0f3eb",
-    "muted": "#a7b0a7",
-    "border": "#344039",
-    "accent": "#d3ef75",
-    "accentSecondary": "#4eaa69",
-    "warning": "#e89a5c",
-    "danger": "#ef8175"
+    "background": "#101014",
+    "surface": "#1a1a20",
+    "surfaceRaised": "#24242c",
+    "text": "#f3f0e9",
+    "muted": "#aaa5a0",
+    "border": "#403b3b",
+    "accent": "#f6af22",
+    "accentSecondary": "#713131",
+    "warning": "#e67c15",
+    "danger": "#b84b4b"
   },
   "shape": {
-    "cardRadius": 8,
-    "controlRadius": 5,
-    "heroRadius": 0,
+    "cardRadius": 5,
+    "controlRadius": 4,
+    "heroRadius": 2,
     "borderWidth": 1
   },
   "effects": {
-    "shadow": "none",
-    "hoverLift": 0,
+    "shadow": "soft",
+    "hoverLift": 1,
     "motionMs": 180
   },
   "backgrounds": {
