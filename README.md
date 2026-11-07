@@ -1,47 +1,39 @@
 # NoteSMP Themes
 
-This repository contains **visual themes only** for the NoteSMP website.
-
-The website layout, routes, content, API calls, player data, and application behavior remain in [notesmp-website](https://github.com/NoteSMP/notesmp-website). Theme contributors should not need access to that repository.
+This repository contains the **visual theme settings** for the NoteSMP website. The website layout, routes, content, API calls, player data and application behavior remain in [notesmp-website](https://github.com/NoteSMP/notesmp-website).
 
 ## Theme slots
 
 | Website option | File |
 |---|---|
-| Default | Built into the website; preserves the current NoteSMP design |
-| Theme 1 | `themes/theme-1.css` |
-| Theme 2 | `themes/theme-2.css` |
-| Theme 3 | `themes/theme-3.css` |
-| Theme 4 | `themes/theme-4.css` |
+| Default | Built into the website; preserves its current appearance |
+| Theme 1 | `themes/theme-1.json` |
+| Theme 2 | `themes/theme-2.json` |
+| Theme 3 | `themes/theme-3.json` |
+| Theme 4 | `themes/theme-4.json` |
 
-The four starter files currently match the existing design. They are intentionally blank design slots until a visual direction is chosen.
+The four starter files intentionally match the current design. They are ready for individual visual directions.
 
-## What themes may change
+## Why themes use JSON tokens
 
-- Colors and gradients
-- Backgrounds and decorative background images
-- Border color, thickness and roundness
-- Shadows, glow and surface treatments
-- Typography and font styling
-- Small hover effects and animations
-- Spacing only when it does not change the page layout or content hierarchy
+Theme files are **data, not executable CSS or JavaScript**. The website validates each value and applies only approved visual properties. This lets contributors adjust appearance without giving them a way to change page structure, hide sections, replace application logic, or alter API behavior through arbitrary CSS.
 
-## What themes must not change
+## What can be themed
 
-- HTML, JavaScript, routes or page structure
-- Section visibility, ordering, placement or assignment
-- API endpoints, data fetching or player information
-- Navigation behavior, forms, controls or accessibility behavior
-- Website deployment configuration or secrets
+- Colors: page, surfaces, text, muted text, borders, accents, warnings and errors.
+- Background images: page and hero.
+- Shapes: card, control and hero corner radius; border thickness.
+- Effects: predefined shadow strength, hover lift and transition duration.
+- Typography: approved built-in font choices.
 
-Do not use CSS to hide, remove, reorder, or disable website sections or controls.
+Do not add HTML, JavaScript, CSS, API configuration, player data or secrets to this repository.
 
 ## Editing a theme
 
-Edit only the CSS file for the slot you are designing. Keep selectors scoped to visual styling and preserve responsive behavior. Use `:root[data-theme="theme-1"]` (replace the slot name as appropriate) for theme variables.
+Edit only the JSON file for the slot you are designing. Preserve the property names and types in the starter file. The website validates values and falls back to the Default theme if a theme cannot be loaded or contains invalid settings.
 
-The website loads the selected CSS file from this repository. Changes to the `main` branch may take a short time to appear because the public CDN caches files.
+Background image URLs are restricted to approved public NoteSMP asset repositories and the existing Minecraft Wiki hero image. Add new image assets to the public resources repository rather than embedding data URLs or external tracking URLs.
 
 ## Previewing
 
-Choose the corresponding Theme 1–4 option in the theme selector at the bottom of the website. The visitor's selection is saved in their own browser and does not change the theme for other visitors.
+Choose Theme 1–4 in the selector at the bottom of the website. The choice is stored in that visitor's browser and does not change the theme for anyone else.
