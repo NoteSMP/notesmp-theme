@@ -64,6 +64,6 @@
     "panel": "muted",
     "hero": "bright",
     "hover": "bright",
-    "cornerSize": 40
+    "cornerSize": 48
   }
 }
