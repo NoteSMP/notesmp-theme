@@ -76,6 +76,36 @@ The `typography` object controls separate font roles and type scale. Font names 
 
 The website loads the listed web fonts through Google Fonts. System UI and Georgia use local system/browser fonts. A font's selected weight should be one that the font actually provides; the browser may synthesize a nearby weight otherwise.
 
+## Theme frame controls
+
+Themes may define an optional `frames` object. Frame configuration is data validated by the website renderer; it does not accept arbitrary CSS or executable content.
+
+| Property | Allowed values | Purpose |
+|---|---|---|
+| `enabled` | boolean | Enables the frame renderer |
+| `style` | `pixel-ornate`, `off` | Selects the built-in frame family |
+| `targets.hero`, `targets.panels`, `targets.cards` | boolean | Chooses which component groups receive frames |
+| `width` | 0–24 | Nine-slice frame inset / thickness, pixels |
+| `slice` | 8–48 | Source SVG corner slice size, pixels |
+| `hero`, `panel`, `hover` | `bright`, `muted`, `none` | Frame state variants |
+
+The renderer maps variants to approved artwork in `notesmp-ressources/ui/theme-2/`. The artwork is rendered as a nine-slice border so corner ornaments retain their proportions. Cards can be left unframed while panels and the hero use the frame system.
+
+Example:
+
+```json
+"frames": {
+  "enabled": true,
+  "style": "pixel-ornate",
+  "targets": { "hero": true, "panels": true, "cards": false },
+  "width": 16,
+  "slice": 32,
+  "hero": "bright",
+  "panel": "muted",
+  "hover": "bright"
+}
+```
+
 ## Theme 2 visual direction
 
 Theme 2 uses a forest-biome palette with a restrained Minecraft Dungeons-style frame language. Main website sections use a single stone-green outer edge with a small grass-green top accent and occasional loot-gold corner detail. Content cards use one accent rail rather than nested outlines. Keep borders structural and consistent; avoid adding multiple inset rectangles or decorative frames around every element.
