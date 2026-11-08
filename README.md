@@ -8,7 +8,7 @@ This repository contains the visual configuration for the NoteSMP website. The w
 |---|---|
 | Default | Built into the website; preserves its standard appearance |
 | Theme 1 | `themes/theme-1.json` |
-| Theme 2 | `themes/theme-2.json` |
+| Theme 2 | `themes/theme-2.json` — Overworld / Minecraft Dungeons-inspired block frames, grass-and-stone edges and loot-gold trim |
 | Theme 3 | `themes/theme-3.json` |
 | Theme 4 | `themes/theme-4.json` |
 
