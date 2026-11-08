@@ -30,6 +30,17 @@
   },
   "typography": {
     "body": "Manrope",
-    "display": "Manrope"
+    "display": "Manrope",
+    "mono": "DM Mono",
+    "bodySize": 16,
+    "headingScale": 1,
+    "smallScale": 1,
+    "bodyLineHeight": 1.7,
+    "headingLineHeight": 1.05,
+    "letterSpacing": 0,
+    "headingLetterSpacing": -0.04,
+    "bodyWeight": 400,
+    "displayWeight": 700,
+    "smallWeight": 600
   }
 }
