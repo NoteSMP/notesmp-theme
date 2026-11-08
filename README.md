@@ -163,6 +163,42 @@ Theme JSON may provide:
 
 These are design inputs only. The website owns their placement, masks, animation behavior and responsive styling; theme JSON cannot inject CSS or markup. When omitted, the renderer uses no extra texture or item decoration.
 
+## Component-specific styling
+
+Themes may optionally define `components.creator` to override the creator cards independently of the global palette. Every value is a six-digit hex color (`#RRGGBB`); omitted values fall back to the theme's semantic colors.
+
+| Property | Controls |
+|---|---|
+| `background`, `hoverBackground` | Creator card fill and hover fill |
+| `border`, `hoverBorder` | Creator card outline and hover outline |
+| `avatarBackground` | Avatar placeholder background |
+| `streamTitle` | Stream title / supporting text |
+| `liveText`, `liveBackground`, `liveBorder` | Live status badge |
+| `offlineText`, `offlineBackground`, `offlineBorder` | Offline status badge |
+
+Example:
+
+```json
+"components": {
+  "creator": {
+    "background": "#2A0E0E",
+    "hoverBackground": "#421515",
+    "border": "#A65A2A",
+    "hoverBorder": "#F4C542",
+    "avatarBackground": "#351111",
+    "streamTitle": "#D9B38C",
+    "liveText": "#FFE6A0",
+    "liveBackground": "#5A2812",
+    "liveBorder": "#E7A92E",
+    "offlineText": "#D1A98A",
+    "offlineBackground": "#241010",
+    "offlineBorder": "#75402A"
+  }
+}
+```
+
+The main website retains control of the creator card structure and status behavior; these values only customize its visual presentation.
+
 ## Example workflow
 
 1. Choose one slot file, such as `themes/theme-2.json`.
