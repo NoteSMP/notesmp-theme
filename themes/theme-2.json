@@ -51,5 +51,20 @@
     "smallWeight": 600,
     "brand": "Oxanium",
     "ui": "Rajdhani"
+  },
+  "frames": {
+    "enabled": true,
+    "style": "pixel-ornate",
+    "targets": {
+      "hero": true,
+      "panels": true,
+      "cards": false
+    },
+    "width": 16,
+    "slice": 32,
+    "panel": "muted",
+    "hero": "bright",
+    "hover": "bright",
+    "edge": "double"
   }
 }
