@@ -1,44 +1,44 @@
 {
-  "name": "Theme 2",
-  "description": "Neutral starter slot matching the current NoteSMP website until its visual direction is designed.",
+  "name": "Overworld Expedition",
+  "description": "A vivid Minecraft Overworld adventure theme with forest greens, sky highlights, warm loot-gold details and block-built framing.",
   "colors": {
-    "background": "#111713",
-    "surface": "#19211b",
-    "surfaceRaised": "#202a23",
-    "text": "#f0f3eb",
-    "muted": "#a7b0a7",
-    "border": "#344039",
-    "accent": "#d3ef75",
-    "accentSecondary": "#4eaa69",
-    "warning": "#e89a5c",
-    "danger": "#ef8175"
+    "background": "#10251D",
+    "surface": "#193629",
+    "surfaceRaised": "#254A36",
+    "text": "#F4F1DA",
+    "muted": "#B8C9AE",
+    "border": "#456A4C",
+    "accent": "#8FE36B",
+    "accentSecondary": "#F2C15D",
+    "warning": "#F0A84B",
+    "danger": "#E56D62"
   },
   "shape": {
-    "cardRadius": 8,
-    "controlRadius": 5,
-    "heroRadius": 0,
-    "borderWidth": 1
+    "cardRadius": 4,
+    "controlRadius": 3,
+    "heroRadius": 5,
+    "borderWidth": 2
   },
   "effects": {
-    "shadow": "none",
-    "hoverLift": 0,
-    "motionMs": 180
+    "shadow": "medium",
+    "hoverLift": 3,
+    "motionMs": 220
   },
   "backgrounds": {
     "page": null,
     "hero": "https://minecraft.wiki/images/Forest.png?536a7"
   },
   "typography": {
-    "body": "Manrope",
-    "display": "Manrope",
+    "body": "DM Sans",
+    "display": "Space Grotesk",
     "mono": "DM Mono",
     "bodySize": 16,
-    "headingScale": 1,
+    "headingScale": 1.04,
     "smallScale": 1,
-    "bodyLineHeight": 1.7,
-    "headingLineHeight": 1.05,
-    "letterSpacing": 0,
-    "headingLetterSpacing": -0.04,
+    "bodyLineHeight": 1.68,
+    "headingLineHeight": 1.02,
+    "letterSpacing": 0.01,
+    "headingLetterSpacing": -0.045,
     "bodyWeight": 400,
     "displayWeight": 700,
     "smallWeight": 600
