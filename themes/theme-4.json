@@ -1,55 +1,79 @@
 {
   "name": "Theme 4",
-  "description": "Neutral starter slot matching the current NoteSMP website until its visual direction is designed.",
+  "description": "Piglin Bastion: gilded blackstone, deep crimson, rich gold, animated loot accents and bastion-inspired item ornaments.",
   "colors": {
-    "background": "#111713",
-    "surface": "#19211b",
-    "surfaceRaised": "#202a23",
-    "text": "#f0f3eb",
-    "muted": "#a7b0a7",
-    "border": "#344039",
-    "accent": "#d3ef75",
-    "accentSecondary": "#4eaa69",
-    "warning": "#e89a5c",
-    "danger": "#ef8175"
+    "background": "#170B0B",
+    "surface": "#2B1010",
+    "surfaceRaised": "#421818",
+    "text": "#FFF0D1",
+    "muted": "#D1A98A",
+    "border": "#8B4A2B",
+    "accent": "#F4C542",
+    "accentSecondary": "#B97825",
+    "warning": "#F09A3E",
+    "danger": "#D94B42"
   },
   "shape": {
-    "cardRadius": 8,
-    "controlRadius": 5,
+    "cardRadius": 0,
+    "controlRadius": 2,
     "heroRadius": 0,
-    "borderWidth": 1
+    "borderWidth": 2
   },
   "effects": {
-    "shadow": "none",
-    "hoverLift": 0,
-    "motionMs": 180
+    "shadow": "strong",
+    "hoverLift": 3,
+    "motionMs": 280
   },
   "backgrounds": {
     "page": null,
-    "hero": "https://minecraft.wiki/images/Forest.png?536a7",
+    "hero": "https://minecraft.wiki/images/BlockSprite_gilded-blackstone.png",
     "heroSettings": {
-      "position": "center 53%",
+      "position": "center",
       "size": "cover",
-      "minHeight": 380,
-      "overlayColor": "#0E1511",
-      "overlayOpacity": 0.55
+      "minHeight": 400,
+      "overlayColor": "#210707",
+      "overlayOpacity": 0.72
     }
   },
   "typography": {
-    "body": "Manrope",
-    "display": "Manrope",
+    "body": "DM Sans",
+    "display": "Cinzel",
     "mono": "DM Mono",
     "bodySize": 16,
-    "headingScale": 1,
+    "headingScale": 1.08,
     "smallScale": 1,
-    "bodyLineHeight": 1.7,
-    "headingLineHeight": 1.05,
-    "letterSpacing": 0,
-    "headingLetterSpacing": -0.04,
+    "bodyLineHeight": 1.65,
+    "headingLineHeight": 1.02,
+    "letterSpacing": 0.015,
+    "headingLetterSpacing": 0.015,
     "bodyWeight": 400,
     "displayWeight": 700,
-    "smallWeight": 600,
-    "brand": "Manrope",
-    "ui": "Manrope"
+    "smallWeight": 700,
+    "brand": "Cinzel",
+    "ui": "Rajdhani"
+  },
+  "frames": {
+    "enabled": true,
+    "style": "nine-slice",
+    "targets": {
+      "hero": true,
+      "panels": true,
+      "cards": false
+    },
+    "width": 10,
+    "hero": "bright",
+    "panel": "bright",
+    "hover": "bright"
+  },
+  "textures": {
+    "pageBase": "https://minecraft.wiki/images/BlockSprite_gilded-blackstone.png",
+    "pageAccent": "https://minecraft.wiki/images/BlockSprite_polished-blackstone-bricks.png?a00af",
+    "panel": "https://minecraft.wiki/images/BlockSprite_polished-blackstone-bricks.png?a00af"
+  },
+  "decorations": {
+    "item": "https://minecraft.wiki/images/Invicon_Gold_Ingot.png",
+    "opacity": 0.82,
+    "size": 24,
+    "animation": "glow"
   }
 }
