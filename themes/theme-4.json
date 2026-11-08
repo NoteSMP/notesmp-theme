@@ -90,6 +90,18 @@
       "offlineText": "#D1A98A",
       "offlineBackground": "#241010",
       "offlineBorder": "#75402A"
+    },
+    "profileTabs": {
+      "text": "#D1A98A",
+      "background": "#241010",
+      "border": "#75402A",
+      "hoverText": "#FFF0D1",
+      "hoverBackground": "#421515",
+      "hoverBorder": "#B97825",
+      "activeText": "#FFF0D1",
+      "activeBackground": "#5A2812",
+      "activeBorder": "#F4C542",
+      "divider": "#75402A"
     }
   }
 }
