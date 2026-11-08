@@ -1,27 +1,27 @@
 {
   "name": "Theme 2",
-  "description": "A vivid Minecraft Overworld adventure theme with forest greens, sky highlights, warm loot-gold details and block-built framing.",
+  "description": "A block-built Minecraft Overworld adventure theme inspired by Minecraft Dungeons: lush biome greens, stone-and-wood framing, stepped corners and loot-gold details.",
   "colors": {
     "background": "#10251D",
-    "surface": "#193629",
-    "surfaceRaised": "#254A36",
+    "surface": "#1B382B",
+    "surfaceRaised": "#294B37",
     "text": "#F4F1DA",
     "muted": "#B8C9AE",
-    "border": "#456A4C",
-    "accent": "#8FE36B",
-    "accentSecondary": "#F2C15D",
+    "border": "#638A52",
+    "accent": "#9BE86A",
+    "accentSecondary": "#E9B95A",
     "warning": "#F0A84B",
     "danger": "#E56D62"
   },
   "shape": {
-    "cardRadius": 4,
-    "controlRadius": 3,
-    "heroRadius": 5,
-    "borderWidth": 2
+    "cardRadius": 0,
+    "controlRadius": 2,
+    "heroRadius": 3,
+    "borderWidth": 3
   },
   "effects": {
-    "shadow": "soft",
-    "hoverLift": 3,
+    "shadow": "medium",
+    "hoverLift": 2,
     "motionMs": 220
   },
   "backgrounds": {
@@ -37,7 +37,7 @@
   },
   "typography": {
     "body": "DM Sans",
-    "display": "Space Grotesk",
+    "display": "Oxanium",
     "mono": "DM Mono",
     "bodySize": 16,
     "headingScale": 1.04,
@@ -45,11 +45,11 @@
     "bodyLineHeight": 1.68,
     "headingLineHeight": 1.02,
     "letterSpacing": 0.01,
-    "headingLetterSpacing": -0.045,
+    "headingLetterSpacing": -0.02,
     "bodyWeight": 400,
     "displayWeight": 700,
     "smallWeight": 600,
-    "brand": "Space Grotesk",
-    "ui": "DM Sans"
+    "brand": "Oxanium",
+    "ui": "Rajdhani"
   }
 }
