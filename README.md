@@ -86,7 +86,7 @@ Themes may define an optional `frames` object. Frame configuration is data valid
 | `style` | `pixel-ornate`, `off` | Selects the built-in frame family |
 | `targets.hero`, `targets.panels`, `targets.cards` | boolean | Chooses which component groups receive frames |
 | `width` | 1–6 | Straight edge line thickness, pixels |
-| `cornerSize` | 20–64 | Fixed corner ornament size, pixels |
+| `cornerSize` | 20–64 | Fixed corner ornament size, pixels (48 recommended) |
 | `hero`, `panel`, `hover` | `bright`, `muted`, `none` | Frame state variants |
 
 The renderer maps each variant to four separate corner SVGs in `notesmp-ressources/ui/theme-2/corners/`. The corners keep a fixed pixel size while the straight edges are drawn independently, so wide heroes and narrow side panels do not stretch or squash the ornaments. Cards can be left unframed while panels and the hero use the frame system.
@@ -99,7 +99,7 @@ Example:
   "style": "pixel-ornate",
   "targets": { "hero": true, "panels": true, "cards": false },
   "width": 2,
-  "cornerSize": 40,
+  "cornerSize": 48,
   "hero": "bright",
   "panel": "muted",
   "hover": "bright"
