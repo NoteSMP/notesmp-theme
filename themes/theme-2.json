@@ -1,6 +1,6 @@
 {
   "name": "Theme 2",
-  "description": "A Minecraft Overworld adventure theme with an inset pixel-art nine-slice frame and a dark polished-blackstone masonry background: 85% polished blackstone bricks, 10% blackstone, and 5% jukebox-side accent blocks.",
+  "description": "A Minecraft Overworld adventure theme with an 8px-corner nine-slice frame on the Info tab only, over a repeating polished-blackstone mosaic containing 85% polished blackstone bricks, 10% regular blackstone, and 5% jukebox-side accents.",
   "colors": {
     "background": "#10251D",
     "surface": "#1B382B",
@@ -60,7 +60,7 @@
       "panels": true,
       "cards": false
     },
-    "width": 10,
+    "width": 8,
     "hero": "bright",
     "panel": "bright",
     "hover": "bright"
