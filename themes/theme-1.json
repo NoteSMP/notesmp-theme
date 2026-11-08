@@ -20,7 +20,7 @@
     "borderWidth": 1
   },
   "effects": {
-    "shadow": "medium",
+    "shadow": "soft",
     "hoverLift": 2,
     "motionMs": 240
   },
