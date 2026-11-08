@@ -1,6 +1,6 @@
 {
   "name": "Theme 2",
-  "description": "A block-built Minecraft Overworld adventure theme inspired by Minecraft Dungeons: lush biome greens, stone-and-wood framing, stepped corners and loot-gold details.",
+  "description": "A block-built Minecraft Overworld adventure theme with forest greens and a single supplied pixel-art nine-slice frame.",
   "colors": {
     "background": "#10251D",
     "surface": "#1B382B",
@@ -54,15 +54,15 @@
   },
   "frames": {
     "enabled": true,
-    "style": "pixel-ornate",
+    "style": "nine-slice",
     "targets": {
       "hero": true,
       "panels": true,
       "cards": false
     },
-    "width": 18,
-    "panel": "muted",
+    "width": 10,
     "hero": "bright",
+    "panel": "bright",
     "hover": "bright"
   }
 }
