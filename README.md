@@ -83,31 +83,16 @@ Themes may define an optional `frames` object. Frame configuration is data valid
 | Property | Allowed values | Purpose |
 |---|---|---|
 | `enabled` | boolean | Enables the frame renderer |
-| `style` | `pixel-ornate`, `off` | Selects the built-in frame family |
+| `style` | `nine-slice`, `off` | Selects the supplied nine-slice PNG renderer |
 | `targets.hero`, `targets.panels`, `targets.cards` | boolean | Chooses which component groups receive frames |
-| `width` | 8–32 | Rendered nine-slice border width, pixels (18 recommended) |
-| `hero`, `panel`, `hover` | `bright`, `muted`, `none` | Frame state variants |
+| `width` | 8–32 | Rendered nine-slice border width, pixels (Theme 2 uses exactly 10) |
+| `hero`, `panel`, `hover` | `bright`, `muted`, `none` | Legacy-compatible selectors; Theme 2 uses the same single asset for every state |
 
-The renderer uses CSS `border-image` with a single nine-slice SVG per variant in `notesmp-ressources/ui/theme-2/frames/`. The 96×96 source is sliced at 32px; its four corners stay protected, its edge slices repeat, and the center fills transparently. Cards can be left unframed while panels and the hero use the frame system.
-
-Example:
-
-```json
-"frames": {
-  "enabled": true,
-  "style": "pixel-ornate",
-  "targets": { "hero": true, "panels": true, "cards": false },
-  "width": 2,
-  "cornerSize": 48,
-  "hero": "bright",
-  "panel": "muted",
-  "hover": "bright"
-}
-```
+The renderer uses CSS `border-image` with the exact user-supplied 30×30 PNG at `notesmp-ressources/ui/theme-2/frames/panel-9slice.png`. Each of its nine slices is 10×10 pixels; CSS uses `border-image-slice: 10 fill` and a 10px rendered border width. The same artwork is applied to the homepage hero and main section panels. There are no alternate frame variants, separate corner overlays or extra ornament layers.
 
 ## Theme 2 visual direction
 
-Theme 2 uses a forest-biome palette with a restrained Minecraft Dungeons-style frame language. Main website sections use a single stone-green outer edge with a small grass-green top accent and occasional loot-gold corner detail. Content cards use one accent rail rather than nested outlines. Keep borders structural and consistent; avoid adding multiple inset rectangles or decorative frames around every element.
+Theme 2 uses a forest-biome palette and the exact supplied 10×10-per-slice pixel-art border on the homepage hero and main section panels. Do not reintroduce CSS-drawn corner ornaments, secondary outlines, or alternate border images.
 
 ## Shapes
 
