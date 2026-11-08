@@ -26,7 +26,14 @@
   },
   "backgrounds": {
     "page": null,
-    "hero": "https://minecraft.wiki/images/Forest.png?536a7"
+    "hero": "https://minecraft.wiki/images/Forest.png?536a7",
+    "heroSettings": {
+      "position": "center 53%",
+      "size": "cover",
+      "minHeight": 380,
+      "overlayColor": "#0E1511",
+      "overlayOpacity": 0.55
+    }
   },
   "typography": {
     "body": "Manrope",
@@ -41,6 +48,8 @@
     "headingLetterSpacing": -0.04,
     "bodyWeight": 400,
     "displayWeight": 700,
-    "smallWeight": 600
+    "smallWeight": 600,
+    "brand": "Manrope",
+    "ui": "Manrope"
   }
 }
