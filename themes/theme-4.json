@@ -78,18 +78,18 @@
   },
   "components": {
     "creator": {
-      "background": "#2A0E0E",
-      "hoverBackground": "#421515",
-      "border": "#A65A2A",
-      "hoverBorder": "#F4C542",
-      "avatarBackground": "#351111",
-      "streamTitle": "#D9B38C",
-      "liveText": "#FFE6A0",
-      "liveBackground": "#5A2812",
-      "liveBorder": "#E7A92E",
-      "offlineText": "#D1A98A",
+      "background": "#241010",
+      "hoverBackground": "#2D1313",
+      "border": "#75402A",
+      "hoverBorder": "#A66B32",
+      "avatarBackground": "#2B1010",
+      "streamTitle": "#C7A58B",
+      "liveText": "#EAD6A5",
+      "liveBackground": "#452313",
+      "liveBorder": "#9A682B",
+      "offlineText": "#BFA18A",
       "offlineBackground": "#241010",
-      "offlineBorder": "#75402A"
+      "offlineBorder": "#68402D"
     },
     "profileTabs": {
       "text": "#D1A98A",
