@@ -1,55 +1,68 @@
 {
   "name": "Theme 3",
-  "description": "Neutral starter slot matching the current NoteSMP website until its visual direction is designed.",
+  "description": "A restrained Minecraft-inspired stone and loot-gold theme for NoteSMP.",
   "colors": {
-    "background": "#111713",
-    "surface": "#19211b",
-    "surfaceRaised": "#202a23",
-    "text": "#f0f3eb",
-    "muted": "#a7b0a7",
-    "border": "#344039",
-    "accent": "#d3ef75",
-    "accentSecondary": "#4eaa69",
-    "warning": "#e89a5c",
-    "danger": "#ef8175"
+    "background": "#11100E",
+    "surface": "#1B1915",
+    "surfaceRaised": "#25221C",
+    "text": "#F1EDE3",
+    "muted": "#B4AA98",
+    "border": "#514638",
+    "accent": "#D6A94F",
+    "accentSecondary": "#78945B",
+    "warning": "#E5A34D",
+    "danger": "#D97868"
   },
   "shape": {
-    "cardRadius": 8,
-    "controlRadius": 5,
-    "heroRadius": 0,
+    "cardRadius": 12,
+    "controlRadius": 8,
+    "heroRadius": 10,
     "borderWidth": 1
   },
   "effects": {
-    "shadow": "none",
-    "hoverLift": 0,
-    "motionMs": 180
+    "shadow": "soft",
+    "hoverLift": 1,
+    "motionMs": 220
   },
   "backgrounds": {
-    "page": null,
+    "page": "https://minecraft.wiki/images/Cobblestone.png",
     "hero": "https://minecraft.wiki/images/Forest.png?536a7",
     "heroSettings": {
       "position": "center 53%",
       "size": "cover",
       "minHeight": 380,
-      "overlayColor": "#0E1511",
-      "overlayOpacity": 0.55
+      "overlayColor": "#11100E",
+      "overlayOpacity": 0.72
     }
   },
   "typography": {
     "body": "Manrope",
-    "display": "Manrope",
+    "display": "Press Start 2P",
     "mono": "DM Mono",
     "bodySize": 16,
-    "headingScale": 1,
+    "headingScale": 0.9,
     "smallScale": 1,
-    "bodyLineHeight": 1.7,
-    "headingLineHeight": 1.05,
+    "bodyLineHeight": 1.65,
+    "headingLineHeight": 1.25,
     "letterSpacing": 0,
-    "headingLetterSpacing": -0.04,
+    "headingLetterSpacing": 0,
     "bodyWeight": 400,
-    "displayWeight": 700,
+    "displayWeight": 400,
     "smallWeight": 600,
     "brand": "Manrope",
     "ui": "Manrope"
+  },
+  "frames": {
+    "enabled": true,
+    "style": "pixel-ornate",
+    "targets": {
+      "hero": true,
+      "panels": true,
+      "cards": true
+    },
+    "width": 16,
+    "hero": "bright",
+    "panel": "muted",
+    "hover": "bright"
   }
 }
