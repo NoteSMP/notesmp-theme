@@ -53,14 +53,14 @@
     "ui": "Rajdhani"
   },
   "frames": {
-    "enabled": false,
+    "enabled": true,
     "style": "nine-slice",
     "targets": {
       "hero": true,
       "panels": true,
       "cards": false
     },
-    "width": 8,
+    "width": 10,
     "hero": "bright",
     "panel": "bright",
     "hover": "bright"
