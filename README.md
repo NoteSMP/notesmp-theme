@@ -8,7 +8,7 @@ This repository contains the visual configuration for the NoteSMP website. The w
 |---|---|
 | Default | Built into the website; preserves its standard appearance |
 | Theme 1 | `themes/theme-1.json` |
-| Theme 2 | `themes/theme-2.json` — Overworld / Minecraft Dungeons-inspired block frames, grass-and-stone edges and loot-gold trim |
+| Theme 2 | `themes/theme-2.json` — Overworld / Minecraft Dungeons-inspired forest palette, section frames, grass-stone accents and loot-gold trim |
 | Theme 3 | `themes/theme-3.json` |
 | Theme 4 | `themes/theme-4.json` |
 
@@ -75,6 +75,10 @@ The `typography` object controls separate font roles and type scale. Font names 
 | Georgia | Local serif | Browser / OS default |
 
 The website loads the listed web fonts through Google Fonts. System UI and Georgia use local system/browser fonts. A font's selected weight should be one that the font actually provides; the browser may synthesize a nearby weight otherwise.
+
+## Theme 2 visual direction
+
+Theme 2 uses a forest-biome palette with a restrained Minecraft Dungeons-style frame language. Main website sections use a single stone-green outer edge with a small grass-green top accent and occasional loot-gold corner detail. Content cards use one accent rail rather than nested outlines. Keep borders structural and consistent; avoid adding multiple inset rectangles or decorative frames around every element.
 
 ## Shapes
 
