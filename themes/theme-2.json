@@ -64,7 +64,6 @@
     "slice": 32,
     "panel": "muted",
     "hero": "bright",
-    "hover": "bright",
-    "edge": "double"
+    "hover": "bright"
   }
 }
