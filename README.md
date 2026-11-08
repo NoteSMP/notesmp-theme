@@ -85,11 +85,11 @@ Themes may define an optional `frames` object. Frame configuration is data valid
 | `enabled` | boolean | Enables the frame renderer |
 | `style` | `pixel-ornate`, `off` | Selects the built-in frame family |
 | `targets.hero`, `targets.panels`, `targets.cards` | boolean | Chooses which component groups receive frames |
-| `width` | 0–24 | Nine-slice frame inset / thickness, pixels |
-| `slice` | 8–48 | Source SVG corner slice size, pixels |
+| `width` | 1–6 | Straight edge line thickness, pixels |
+| `cornerSize` | 20–64 | Fixed corner ornament size, pixels |
 | `hero`, `panel`, `hover` | `bright`, `muted`, `none` | Frame state variants |
 
-The renderer maps variants to approved artwork in `notesmp-ressources/ui/theme-2/`. The artwork is rendered as a nine-slice border so corner ornaments retain their proportions. Cards can be left unframed while panels and the hero use the frame system.
+The renderer maps each variant to four separate corner SVGs in `notesmp-ressources/ui/theme-2/corners/`. The corners keep a fixed pixel size while the straight edges are drawn independently, so wide heroes and narrow side panels do not stretch or squash the ornaments. Cards can be left unframed while panels and the hero use the frame system.
 
 Example:
 
@@ -98,8 +98,8 @@ Example:
   "enabled": true,
   "style": "pixel-ornate",
   "targets": { "hero": true, "panels": true, "cards": false },
-  "width": 16,
-  "slice": 32,
+  "width": 2,
+  "cornerSize": 40,
   "hero": "bright",
   "panel": "muted",
   "hover": "bright"
