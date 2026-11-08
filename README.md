@@ -199,6 +199,17 @@ Example:
 
 The main website retains control of the creator card structure and status behavior; these values only customize its visual presentation.
 
+### Player profile section selector
+
+Themes may also define `components.profileTabs` to customize the Statistics / Advancements / Posts selector on player UUID pages. Each property is a six-digit hex color (`#RRGGBB`); omitted values fall back to the main theme palette.
+
+| Property | Controls |
+|---|---|
+| `text`, `background`, `border` | Inactive tab |
+| `hoverText`, `hoverBackground`, `hoverBorder` | Hovered tab |
+| `activeText`, `activeBackground`, `activeBorder` | Selected tab |
+| `divider` | Line beneath the tab group |
+
 ## Example workflow
 
 1. Choose one slot file, such as `themes/theme-2.json`.
