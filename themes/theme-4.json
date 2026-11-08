@@ -75,5 +75,21 @@
     "opacity": 0.82,
     "size": 24,
     "animation": "glow"
+  },
+  "components": {
+    "creator": {
+      "background": "#2A0E0E",
+      "hoverBackground": "#421515",
+      "border": "#A65A2A",
+      "hoverBorder": "#F4C542",
+      "avatarBackground": "#351111",
+      "streamTitle": "#D9B38C",
+      "liveText": "#FFE6A0",
+      "liveBackground": "#5A2812",
+      "liveBorder": "#E7A92E",
+      "offlineText": "#D1A98A",
+      "offlineBackground": "#241010",
+      "offlineBorder": "#75402A"
+    }
   }
 }
