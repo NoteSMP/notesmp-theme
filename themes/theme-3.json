@@ -14,10 +14,10 @@
     "danger": "#D97868"
   },
   "shape": {
-    "cardRadius": 12,
+    "cardRadius": 0,
     "controlRadius": 8,
-    "heroRadius": 10,
-    "borderWidth": 1
+    "heroRadius": 0,
+    "borderWidth": 0
   },
   "effects": {
     "shadow": "soft",
@@ -60,9 +60,9 @@
       "panels": true,
       "cards": true
     },
-    "width": 16,
+    "width": 24,
     "hero": "bright",
-    "panel": "muted",
+    "panel": "bright",
     "hover": "bright"
   }
 }
