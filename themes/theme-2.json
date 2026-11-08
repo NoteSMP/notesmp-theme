@@ -60,10 +60,10 @@
       "panels": true,
       "cards": false
     },
-    "width": 16,
-    "slice": 32,
+    "width": 2,
     "panel": "muted",
     "hero": "bright",
-    "hover": "bright"
+    "hover": "bright",
+    "cornerSize": 40
   }
 }
