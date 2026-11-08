@@ -115,7 +115,7 @@ All values are pixels.
 
 ## Background images and hero art direction
 
-The `backgrounds` object controls the page and main homepage hero artwork.
+The `backgrounds` object controls the page and main homepage hero artwork. Optional `textures` and `decorations` objects expose controlled, validated texture and Minecraft item-art variables to the main website renderer.
 
 | JSON key | Type | Purpose |
 |---|---|---|
@@ -152,6 +152,16 @@ Image URLs must use HTTPS and an approved public source:
 - The matching `cdn.jsdelivr.net/gh/NoteSMP/...@main/...` paths.
 
 Put reusable artwork in the public resources repository where possible. Do not use data URLs, private assets, arbitrary third-party hosts or tracking URLs. A `null` page image leaves the theme's CSS page background in control; a `null` hero image uses the website's built-in hero artwork.
+
+## Optional texture and decoration variables
+
+Theme JSON may provide:
+- `textures.pageBase`, `textures.pageAccent`, `textures.panel`: optional approved HTTPS image URLs. The website renderer maps these to `--theme-texture-page-base`, `--theme-texture-page-accent` and `--theme-texture-panel`.
+- `decorations.item`: optional approved Minecraft item image URL.
+- `decorations.opacity`: 0–1; `decorations.size`: 12–96 pixels.
+- `decorations.animation`: `none`, `glow` or `float`.
+
+These are design inputs only. The website owns their placement, masks, animation behavior and responsive styling; theme JSON cannot inject CSS or markup. When omitted, the renderer uses no extra texture or item decoration.
 
 ## Example workflow
 
