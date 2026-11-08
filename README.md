@@ -1,104 +1,151 @@
 # NoteSMP Themes
 
-This repository contains the **visual theme settings** for the NoteSMP website. The website layout, routes, content, API calls, player data and application behavior remain in [notesmp-website](https://github.com/NoteSMP/notesmp-website).
+This repository contains the visual configuration for the NoteSMP website. The website's layout, routes, content, API calls, player data and application behavior remain in [notesmp-website](https://github.com/NoteSMP/notesmp-website).
 
 ## Theme slots
 
 | Website option | File |
 |---|---|
-| Default | Built into the website; preserves its current appearance |
+| Default | Built into the website; preserves its standard appearance |
 | Theme 1 | `themes/theme-1.json` |
 | Theme 2 | `themes/theme-2.json` |
 | Theme 3 | `themes/theme-3.json` |
 | Theme 4 | `themes/theme-4.json` |
 
-The four starter files intentionally match the current design, except for Theme 1's current blackstone / gold / red experiment. Each slot can be designed independently.
+Each slot is independent. The JSON files are the editable design surface; the website validates the values and maps them to a controlled set of CSS properties.
 
-## Why themes use JSON tokens
+## Safe customization model
 
-Theme files are **data, not executable CSS or JavaScript**. The website validates each value and applies only approved visual properties. This lets contributors adjust appearance without giving them a way to change page structure, hide sections, replace application logic, or alter API behavior through arbitrary CSS.
+Theme files are data, not executable CSS or JavaScript. You can change the visual identity—including the hero artwork, font roles, colors, shapes, backgrounds and interaction effects—but cannot use a theme to inject scripts, arbitrary CSS, hide/reorder website sections, replace application logic, or alter API behavior.
 
-## What can be themed
+Keep the existing JSON property names and value types. The website uses safe defaults for the optional `backgrounds.heroSettings`, `typography.brand` and `typography.ui` properties when they are omitted.
 
-### Colors
+## Colors
 
-Every color is a six-digit hexadecimal value (`#RRGGBB`).
+All color values must be six-digit hexadecimal strings (`#RRGGBB`). All ten keys are required.
 
-| JSON key | Website token | Purpose |
+| JSON key | Purpose |
+|---|---|
+| `background` | Main page background |
+| `surface` | Main cards and panels |
+| `surfaceRaised` | Raised panels and secondary surfaces |
+| `text` | Primary text |
+| `muted` | Secondary text, labels and supporting copy |
+| `border` | Borders and separators |
+| `accent` | Primary highlight, active states and key actions |
+| `accentSecondary` | Secondary accent |
+| `warning` | Warnings and attention states |
+| `danger` | Errors and destructive states |
+
+The website maps these semantic colors onto its existing design tokens. Keep text/background contrast readable.
+
+## Typography
+
+The `typography` object controls separate font roles and type scale. Font names must be selected from the approved list; theme JSON cannot load arbitrary font files or font URLs.
+
+| JSON key | Allowed values | Used for |
 |---|---|---|
-| `background` | `--bg` | Main page background |
-| `surface` | `--surface`, `--panel` | Main cards and panels |
-| `surfaceRaised` | `--surface-raised`, `--panel2` | Raised panels and secondary surfaces |
-| `text` | `--text` | Primary text |
-| `muted` | `--muted` | Secondary text, labels and supporting copy |
-| `border` | `--line` | Borders and separators |
-| `accent` | `--lime`, `--green` | Primary highlight, active states and key actions |
-| `accentSecondary` | `--green2` | Secondary accent |
-| `warning` | `--orange` | Warnings and attention states |
-| `danger` | `--red` | Errors, destructive and danger states |
+| `body` | Approved font name | Main body copy |
+| `display` | Approved font name | Headings and display text |
+| `mono` | Approved font name | Numeric and technical text |
+| `brand` | Approved font name | Website wordmark / brand lettering; defaults to `display` |
+| `ui` | Approved font name | Buttons and form controls; defaults to `body` |
+| `bodySize` | 12–20 | Base body size, pixels |
+| `headingScale` | 0.75–1.5 | Heading scale factor |
+| `smallScale` | 0.75–1.5 | Compact label / metadata scale |
+| `bodyLineHeight` | 1.2–2 | Body line-height multiplier |
+| `headingLineHeight` | 0.85–1.4 | Heading line-height multiplier |
+| `letterSpacing` | -0.05–0.1 | Body letter spacing, em |
+| `headingLetterSpacing` | -0.1–0.05 | Heading letter spacing, em |
+| `bodyWeight`, `displayWeight`, `smallWeight` | 400, 500, 600, 700, 800 | Font weights for each text role |
 
-All ten color keys are required. Use sufficient contrast between text and its background. The website maps the generic theme tokens onto the color variables used by its different page styles.
+### Approved fonts
 
-### Typography
-
-Typography is configured in the `typography` object. Font family names must be selected from the website's approved font list; themes cannot load arbitrary fonts or external font URLs.
-
-| JSON key | Type / allowed values | Purpose |
+| Font | Style | Loaded weights |
 |---|---|---|
-| `body` | Font name | Main body and interface font |
-| `display` | Font name | Headings and display text |
-| `mono` | Font name | Monospaced text, numbers and technical details |
-| `bodySize` | Number, 12–20 | Base body size in pixels |
-| `headingScale` | Number, 0.75–1.5 | Scale factor for primary headings |
-| `smallScale` | Number, 0.75–1.5 | Scale factor for compact labels and metadata |
-| `bodyLineHeight` | Number, 1.2–2 | Body text line-height multiplier |
-| `headingLineHeight` | Number, 0.85–1.4 | Heading line-height multiplier |
-| `letterSpacing` | Number, -0.05–0.1 | Body letter spacing in em |
-| `headingLetterSpacing` | Number, -0.1–0.05 | Heading letter spacing in em |
-| `bodyWeight` | 400, 500, 600, 700, 800 | Body font weight |
-| `displayWeight` | 400, 500, 600, 700, 800 | Heading font weight |
-| `smallWeight` | 400, 500, 600, 700, 800 | Compact label / metadata font weight |
-
-Approved font families and available weights:
-
-| Font | Type | Available weights |
-|---|---|---|
-| Manrope | Sans-serif | 400, 500, 600, 700, 800 |
-| DM Sans | Sans-serif | 400, 500, 600, 700, 800 |
-| Space Grotesk | Sans-serif / display | 400, 500, 600, 700 |
+| Manrope | Modern geometric sans | 400, 500, 600, 700, 800 |
+| DM Sans | Neutral sans | 400, 500, 600, 700, 800 |
+| Space Grotesk | Technical display sans | 400, 500, 600, 700 |
+| Oxanium | Futuristic / sci-fi display | 400, 500, 600, 700 |
+| Rajdhani | Narrow game / UI sans | 400, 500, 600, 700 |
+| Cinzel | Fantasy / classical serif | 400, 500, 600, 700 |
+| Press Start 2P | Pixel-art display | 400 |
 | DM Mono | Monospaced | 400, 500 |
-| System UI | System sans-serif | Browser / operating-system defaults |
-| Georgia | Serif | Browser / operating-system defaults |
+| System UI | Local system sans | Browser / OS default |
+| Georgia | Local serif | Browser / OS default |
 
-The website loads the web fonts it offers through Google Fonts. System UI and Georgia use local system/browser fonts. The default theme typography is Manrope for body and display, DM Mono for monospace, with a 16px body size and a 1.0 scale for headings and compact text.
+The website loads the listed web fonts through Google Fonts. System UI and Georgia use local system/browser fonts. A font's selected weight should be one that the font actually provides; the browser may synthesize a nearby weight otherwise.
 
-### Shapes
+## Shapes
 
-| JSON key | Range | Purpose |
+All values are pixels.
+
+| JSON key | Range | Controls |
 |---|---:|---|
-| `cardRadius` | 0–28 | Card and panel corner radius, in pixels |
-| `controlRadius` | 0–28 | Buttons and control corner radius, in pixels |
-| `heroRadius` | 0–40 | Hero container corner radius, in pixels |
-| `borderWidth` | 0–4 | Theme-controlled border thickness, in pixels |
+| `cardRadius` | 0–28 | Card and panel corners |
+| `controlRadius` | 0–28 | Buttons and form controls |
+| `heroRadius` | 0–40 | Hero container corners |
+| `borderWidth` | 0–4 | Shared theme border thickness |
 
-### Effects
+## Effects
 
-| JSON key | Allowed values | Purpose |
+| JSON key | Allowed values / range | Controls |
 |---|---|---|
-| `shadow` | `none`, `soft`, `strong` | Predefined card shadow |
-| `hoverLift` | 0–4 | Hover lift distance, in pixels |
-| `motionMs` | 0–600 | Transition duration, in milliseconds |
+| `shadow` | `none`, `soft`, `medium`, `strong` | Predefined shadow strength |
+| `hoverLift` | 0–4 | Hover lift distance, pixels |
+| `motionMs` | 0–600 | Shared transition duration, milliseconds |
 
-### Background images
+## Background images and hero art direction
 
-The `backgrounds` object supports `page` and `hero`. Each accepts `null` or an approved HTTPS image URL. URLs are restricted to approved public NoteSMP asset repositories and the existing Minecraft Wiki image location. Add new image assets to the public resources repository rather than embedding data URLs or external tracking URLs.
+The `backgrounds` object controls the page and main homepage hero artwork.
 
-## Editing a theme
+| JSON key | Type | Purpose |
+|---|---|---|
+| `page` | `null` or approved HTTPS image URL | Optional page background image |
+| `hero` | `null` or approved HTTPS image URL | Homepage hero image |
+| `heroSettings.position` | Approved position string | Image focal point / crop |
+| `heroSettings.size` | `cover` or `contain` | How the image fits the hero |
+| `heroSettings.minHeight` | 240–720 | Hero minimum height, pixels |
+| `heroSettings.overlayColor` | Hex color | Tint used to keep hero text readable |
+| `heroSettings.overlayOpacity` | 0–0.95 | Strength of the hero tint |
 
-Edit only the JSON file for the slot you are designing. Preserve the property names and types in the starter file. All listed color, shape, effect, background and typography settings are validated. The website falls back to the Default theme if a theme cannot be loaded or contains invalid settings.
+Supported hero positions: `center`, `center top`, `center center`, `center bottom`, `left center`, `right center`, `58% center`, `center 42%`, `center 53%`, and `center 60%`.
 
-Do not add HTML, JavaScript, CSS, API configuration, player data or secrets to this repository.
+Example:
 
-## Previewing
+```json
+"backgrounds": {
+  "page": null,
+  "hero": "https://minecraft.wiki/images/Forest.png?536a7",
+  "heroSettings": {
+    "position": "center 42%",
+    "size": "cover",
+    "minHeight": 420,
+    "overlayColor": "#10251D",
+    "overlayOpacity": 0.62
+  }
+}
+```
 
-Choose Theme 1–4 in the selector at the bottom of the website. The choice is stored in that visitor's browser and does not change the theme for anyone else.
+Image URLs must use HTTPS and an approved public source:
+- `minecraft.wiki/images/...`
+- `raw.githubusercontent.com/NoteSMP/notesmp-ressources/...`
+- `raw.githubusercontent.com/NoteSMP/notesmp-theme/...`
+- The matching `cdn.jsdelivr.net/gh/NoteSMP/...@main/...` paths.
+
+Put reusable artwork in the public resources repository where possible. Do not use data URLs, private assets, arbitrary third-party hosts or tracking URLs. A `null` page image leaves the theme's CSS page background in control; a `null` hero image uses the website's built-in hero artwork.
+
+## Example workflow
+
+1. Choose one slot file, such as `themes/theme-2.json`.
+2. Set its colors and shapes.
+3. Choose separate `body`, `display`, `mono`, `brand` and `ui` fonts.
+4. Set `backgrounds.hero` and tune `heroSettings.position`, `size`, `minHeight` and overlay.
+5. Adjust effects and typography scales.
+6. Commit the JSON change and preview that slot using the selector at the bottom of the website.
+
+The website falls back to Default if a file cannot be loaded or contains invalid settings. The selector choice is stored in each visitor's browser and does not change the theme for other visitors.
+
+## Contribution boundaries
+
+Do not add HTML, JavaScript, CSS, API configuration, player data, credentials or secrets to this repository. Contributors should make changes only to the theme JSON files and follow the approved schema above. The website repository owns the renderer and the allowed property list.
