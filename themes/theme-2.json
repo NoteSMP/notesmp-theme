@@ -1,6 +1,6 @@
 {
   "name": "Theme 2",
-  "description": "A Minecraft Overworld adventure theme with an 8px-corner nine-slice frame on the Info tab only, over a repeating polished-blackstone mosaic containing 85% polished blackstone bricks, 10% regular blackstone, and 5% jukebox-side accents.",
+  "description": "Overworld Expedition with a large nearest-neighbour polished/cracked blackstone mosaic, netherrack-and-blackstone Info panels, and an 8/14/8 nine-slice frame on the Info hero and sections only.",
   "colors": {
     "background": "#10251D",
     "surface": "#1B382B",
