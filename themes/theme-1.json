@@ -1,17 +1,17 @@
 {
   "name": "Theme 1",
-  "description": "Blackstone test theme using the NoteSMP logo's gold and deep red palette.",
+  "description": "Warm crimson and gold theme using the supplied NoteSMP palette.",
   "colors": {
-    "background": "#101014",
-    "surface": "#1a1a20",
-    "surfaceRaised": "#24242c",
-    "text": "#f3f0e9",
-    "muted": "#aaa5a0",
-    "border": "#403b3b",
-    "accent": "#f6af22",
-    "accentSecondary": "#713131",
-    "warning": "#e67c15",
-    "danger": "#b84b4b"
+    "background": "#4E1717",
+    "surface": "#562121",
+    "surfaceRaised": "#682525",
+    "text": "#FFF4E8",
+    "muted": "#D8B7A4",
+    "border": "#834141",
+    "accent": "#FAF25E",
+    "accentSecondary": "#F6AF22",
+    "warning": "#E67C15",
+    "danger": "#713131"
   },
   "shape": {
     "cardRadius": 5,
