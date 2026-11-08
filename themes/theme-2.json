@@ -1,6 +1,6 @@
 {
   "name": "Theme 2",
-  "description": "Overworld Expedition with a large nearest-neighbour polished/cracked blackstone mosaic, netherrack-and-blackstone Info panels, and an 8/14/8 nine-slice frame on the Info hero and sections only.",
+  "description": "Overworld Expedition with a dark polished/cracked blackstone page mosaic and solid darkened netherrack Info panels.",
   "colors": {
     "background": "#10251D",
     "surface": "#1B382B",
@@ -53,7 +53,7 @@
     "ui": "Rajdhani"
   },
   "frames": {
-    "enabled": true,
+    "enabled": false,
     "style": "nine-slice",
     "targets": {
       "hero": true,
