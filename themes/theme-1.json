@@ -1,28 +1,28 @@
 {
   "name": "Theme 1",
-  "description": "Warm crimson and gold theme using the supplied NoteSMP palette.",
+  "description": "Crimson blackstone with polished gold accents, restrained motion and Minecraft Dungeons-inspired framed panels.",
   "colors": {
     "background": "#4E1717",
-    "surface": "#562121",
-    "surfaceRaised": "#682525",
+    "surface": "#4A1B1D",
+    "surfaceRaised": "#612326",
     "text": "#FFF4E8",
-    "muted": "#D8B7A4",
-    "border": "#834141",
-    "accent": "#FAF25E",
-    "accentSecondary": "#F6AF22",
+    "muted": "#D8BFA5",
+    "border": "#9A6B32",
+    "accent": "#F5C451",
+    "accentSecondary": "#D99B2B",
     "warning": "#E67C15",
     "danger": "#713131"
   },
   "shape": {
-    "cardRadius": 5,
-    "controlRadius": 4,
-    "heroRadius": 2,
+    "cardRadius": 7,
+    "controlRadius": 5,
+    "heroRadius": 4,
     "borderWidth": 1
   },
   "effects": {
-    "shadow": "soft",
-    "hoverLift": 1,
-    "motionMs": 180
+    "shadow": "medium",
+    "hoverLift": 2,
+    "motionMs": 240
   },
   "backgrounds": {
     "page": null,
