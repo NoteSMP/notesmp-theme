@@ -102,6 +102,21 @@
       "activeBackground": "#5A2812",
       "activeBorder": "#F4C542",
       "divider": "#75402A"
+    },
+    "heroEvent": {
+      "titleFont": "Cinzel",
+      "titleColor": "#FFF0D1",
+      "titleWeight": 700,
+      "subtitleFont": "DM Sans",
+      "subtitleColor": "#D1A98A",
+      "labelFont": "Rajdhani",
+      "labelColor": "#F4C542",
+      "detailFont": "DM Mono",
+      "detailColor": "#FFF0D1",
+      "statusColor": "#F4C542",
+      "inProgressColor": "#8BE0A2",
+      "background": "#2B1010",
+      "border": "#B97825"
     }
   }
 }
